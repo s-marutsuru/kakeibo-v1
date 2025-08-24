@@ -1,0 +1,42 @@
+
+:root{
+  --bg:#0b1220; --card:#101a2b; --muted:#9fb0c6; --text:#e6edf6; --accent:#0ea5e9; --accent-2:#22c55e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{ margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP";
+  background:var(--bg); color:var(--text);
+}
+.app-header, .app-footer{ padding:12px 16px; background:linear-gradient(180deg, rgba(14,165,233,.15), transparent 80%);}
+.app-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; position:sticky; top:0; z-index:5;}
+.user-row{display:flex; gap:8px; align-items:center}
+.user-email{opacity:.85; font-size:.9rem}
+main{padding:16px; display:grid; gap:16px; max-width:980px; margin:0 auto}
+.card{background:var(--card); border-radius:16px; padding:16px; box-shadow: 0 10px 30px rgba(0,0,0,.25);}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.grid label{display:flex; flex-direction:column; gap:6px; font-size:.95rem}
+.grid input, .grid select{padding:10px 12px; border-radius:12px; border:1px solid #243043; background:#0d1626; color:var(--text);}
+.actions{display:flex; gap:8px; margin-top:8px}
+.btn{padding:10px 14px; border-radius:12px; border:1px solid #2a3a56; background:#0e1728; color:var(--text); cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.primary{background:linear-gradient(90deg, var(--accent), #60a5fa); border-color:transparent; color:#052438; font-weight:700}
+.month-switch{display:flex; justify-content:center; align-items:center; gap:12px}
+.month-label{font-weight:700; font-size:1.1rem; padding:6px 12px; border-radius:999px; border:1px solid #244a68; background:#0c1a27;}
+.responsive-table{overflow:auto; border-radius:12px; border:1px solid #1e2c44}
+table{width:100%; border-collapse:collapse}
+th, td{padding:10px 12px; border-bottom:1px solid #1e2c44; text-align:left}
+th.num, td.num{text-align:right}
+.row{display:flex; align-items:center; justify-content:space-between; gap:8px}
+.status{margin-top:8px; min-height:1em; color:var(--muted)}
+.reports{display:grid; grid-template-columns:1fr; gap:16px}
+.totals{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px}
+.total-box{background:#0d1828; border:1px solid #244a68; border-radius:12px; padding:12px; display:flex; flex-direction:column; gap:8px; align-items:center}
+.total-box.strong{background:#0d202e; border-color:#3b82f6}
+.yen{font-size:1.3rem; font-variant-numeric:tabular-nums}
+dialog{border:none; padding:0; background:transparent}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .card{width:min(520px, 92vw)}
+@media (max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .totals{grid-template-columns:repeat(2, 1fr)}
+}
