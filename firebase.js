@@ -33,13 +33,14 @@ async function signInPopupPreferred() {
       return null;
     }
     // debug firestore authenticationで許可されてないユーザの場合におかしくなる
-    // -> 強制的にログオフさせる。
-    firebase.auth().signOut().then(() => {
-        alert("このアカウントでは利用できません。別のGoogleアカウントでログインしてください。");
-        window.location.reload();
-    });
+    // -> Googleを強制的にログオフさせる。
+  const confirmLogout = confirm("許可されていないアカウントです。Googleからログオフしますか？");
+  if (confirmLogout) {
+      // Googleアカウントのログアウト
+      window.location.href = "https://accounts.google.com/Logout";
+  }
 
-    throw e;
+  throw e;
   }
 }
 

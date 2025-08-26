@@ -68,3 +68,25 @@ export function clearLogin() {
 
 
 
+// 許可外アカウントの時に呼ぶ処理
+function handleUnauthorizedAccount() {
+  const confirmLogout = confirm("許可されていないアカウントです。Googleからログオフしますか？");
+
+  if (confirmLogout) {
+    // Firebaseログアウト
+    firebase.auth().signOut().then(() => {
+      console.log("Firebase セッションをクリアしました");
+
+      // Googleアカウントのログアウト
+      window.location.href = "https://accounts.google.com/Logout";
+    }).catch((error) => {
+      console.error("ログアウトエラー:", error);
+    });
+  } else {
+    console.log("ユーザーがログオフをキャンセルしました");
+  }
+}
+
+
+
+
