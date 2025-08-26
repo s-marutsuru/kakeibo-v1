@@ -6,7 +6,7 @@
   <title>家計簿PWA</title>
   <meta name="theme-color" content="#0ea5e9">
   <!-- <link rel="manifest" href="/kakeibo-v1/manifest.webmanifest"> -->
-  <link rel="manifest" href="/kakeibo-v1/manifest.webmanifest">
+  <link rel="manifest" href="./kakeibo-v1/manifest.json">
   <!-- <link rel="icon" href="/icons/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/icons/apple-touch-180.png"> -->
   <link rel="icon" href="/kakeibo-v1/icons/favicon-32.png" sizes="32x32">
@@ -164,9 +164,10 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/kakeibo-v1/sw.js').catch(console.error);
-      });
+      navigator.serviceWorker.register('./kakeibo-v1/sw.js');
+      // window.addEventListener('load', () => {
+      //   navigator.serviceWorker.register('./kakeibo-v1/sw.js').catch(console.error);
+      // });
     }
   </script>
 </body>
