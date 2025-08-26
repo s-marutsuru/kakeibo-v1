@@ -123,10 +123,8 @@
     if (!currentUser) return;
     const key = yyyymm(currentMonth);
     try {
-      const snap = await window.FirebaseCtx.db.collection('expenses')
-        .where('ownerUid','==', currentUser.uid)
-        .where('monthKey','==', key)
-        .orderBy('dateStr').get();
+      const snap = await window.FirebaseCtx.db.collection('expenses').where('monthKey','==', key).orderBy('dateStr').get();
+      // .where('ownerUid','==', currentUser.uid) 
       currentDocs = snap.docs.map(d => ({id:d.id, data:d.data()}));
       renderList();
       renderTotalsAndChart();      

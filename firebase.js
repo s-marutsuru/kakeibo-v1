@@ -32,6 +32,10 @@ async function signInPopupPreferred() {
       await auth.signInWithRedirect(provider);
       return null;
     }
+    // debug firestore authenticationで許可されてないユーザの場合におかしくなる
+    // -> 強制的にログオフさせる。
+    firebase.auth().signOut()
+
     throw e;
   }
 }
