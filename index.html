@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>家計簿PWA</title>
   <meta name="theme-color" content="#0ea5e9">
-  <!-- <link rel="manifest" href="/kakeibo-v1/manifest.webmanifest"> -->
   <link rel="manifest" href="./manifest.json">
-  <!-- <link rel="icon" href="/icons/favicon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/icons/apple-touch-180.png"> -->
   <link rel="icon" href="./icons/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./icons/apple-touch-180.png">  
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,7 +47,6 @@
           <select id="payerInput">
             <option value="おっと">おっと</option>
             <option value="つま">つま</option>
-            <!-- <option value="共通">共通</option> -->
           </select>
         </label>
 
@@ -86,12 +82,10 @@
     <section class="details card">
       <div class="row">
         <h2>明細（<span id="currentMonthLong">—</span>）</h2>
-        <!-- add debug         -->
         <button id="toggle-details">▶ 明細を表示</button>
         <button id="csvBtn" class="btn">CSV出力</button>
       </div>
       <div class="responsive-table">     
-        <!-- <table id="listTable"> -->
         <table id="listTable" style="display:none;">
           <thead>
             <tr>
@@ -118,7 +112,6 @@
         <div class="totals">
           <div class="total-box"><div>おっと</div><div id="sumHusband" class="yen">—</div></div>
           <div class="total-box"><div>つま</div><div id="sumWife" class="yen">—</div></div>
-          <!-- <div class="total-box"><div>共通</div><div id="sumShared" class="yen">—</div></div> -->
           <div class="total-box strong"><div>合計</div><div id="sumTotal" class="yen">—</div></div>
         </div>
       </div>
@@ -135,7 +128,6 @@
           <select id="editPayer">
             <option value="おっと">おっと</option>
             <option value="つま">つま</option>
-            <!-- <option value="共通">共通</option> -->
           </select>
         </label>
         <label>カテゴリ

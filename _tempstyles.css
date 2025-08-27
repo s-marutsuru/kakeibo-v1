@@ -1,0 +1,18 @@
+/* 入力欄を大きくする例 */
+input, select, textarea {
+  font-size: 18px;   /* 文字を大きく */
+  padding: 10px;     /* 内側の余白 */
+  width: 100%;       /* 横幅いっぱいに */
+  box-sizing: border-box; /* はみ出し防止 */
+}
+
+
+/* 明細リストを横書きに修正 */
+.expense-list {
+  writing-mode: horizontal-tb; /* 横書き */
+  text-orientation: mixed;
+}
+
+
+
+

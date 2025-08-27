@@ -40,3 +40,19 @@ dialog .card{width:min(520px, 92vw)}
   .grid{grid-template-columns:1fr}
   .totals{grid-template-columns:repeat(2, 1fr)}
 }
+
+/* 入力欄を大きくする 調整 try ---  */
+input, select, textarea {
+  font-size: 18px;   /* 文字を大きく */
+  padding: 10px;     /* 内側の余白 */
+  width: 100%;       /* 横幅いっぱいに */
+  box-sizing: border-box; /* はみ出し防止 */
+}
+
+/* 明細リストを横書きにする */
+.responsive-table {
+  writing-mode: horizontal-tb; /* 横書き */
+  text-orientation: mixed;
+}
+
+
