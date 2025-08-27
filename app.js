@@ -203,7 +203,7 @@
 
   // 明細表示の切替処理
   document.getElementById("toggle-details").addEventListener("click", function () {
-    const list = document.getElementById("responsive-table");
+    const list = document.getElementById("listTable");
     if (list.style.display === "none") {
       list.style.display = "block";
       this.textContent = "▼ 明細を隠す";
