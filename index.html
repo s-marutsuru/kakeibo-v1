@@ -46,23 +46,25 @@
           <input id="dateInput" type="date" required>
         </label>
 
-        <label>入力者
+        <label>支出者
           <select id="payerInput">
             <option value="おっと">おっと</option>
             <option value="つま">つま</option>
-            <option value="共通">共通</option>
+            <!-- <option value="共通">共通</option> -->
           </select>
         </label>
 
         <label>カテゴリ
           <select id="categoryInput">
             <option value="食費">食費</option>
-            <option value="日用品">日用品</option>
-            <option value="固定出費（家賃•光熱•通信）">固定出費（家賃•光熱•通信）</option>
-            <option value="外食等">外食等</option>
-            <option value="医療費">医療費</option>
-            <option value="美容">美容</option>
-            <option value="その他">その他</option>
+            <option value="衛生用品">衛生用品</option>
+            <option value="生活用品">生活用品</option>
+            <option value="電気">電気</option>
+            <option value="ガス">ガス</option>
+            <option value="水道">水道</option>
+            <option value="家賃">家賃</option>
+            <option value="ベビー用品">ベビー用品</option>
+            <option value="その他">その他</option>            
           </select>
         </label>
 
@@ -91,7 +93,7 @@
           <thead>
             <tr>
               <th>日付</th>
-              <th>入力者</th>
+              <th>支出者</th>
               <th>カテゴリ</th>
               <th>メモ</th>
               <th class="num">金額</th>
@@ -109,11 +111,11 @@
         <canvas id="categoryChart" height="220"></canvas>
       </div>
       <div class="card">
-        <h2>入力者別 合計</h2>
+        <h2>支出者別 合計</h2>
         <div class="totals">
           <div class="total-box"><div>おっと</div><div id="sumHusband" class="yen">—</div></div>
           <div class="total-box"><div>つま</div><div id="sumWife" class="yen">—</div></div>
-          <div class="total-box"><div>共通</div><div id="sumShared" class="yen">—</div></div>
+          <!-- <div class="total-box"><div>共通</div><div id="sumShared" class="yen">—</div></div> -->
           <div class="total-box strong"><div>合計</div><div id="sumTotal" class="yen">—</div></div>
         </div>
       </div>
@@ -126,22 +128,24 @@
         <label>日付
           <input id="editDate" type="date" required>
         </label>
-        <label>入力者
+        <label>支出者
           <select id="editPayer">
             <option value="おっと">おっと</option>
             <option value="つま">つま</option>
-            <option value="共通">共通</option>
+            <!-- <option value="共通">共通</option> -->
           </select>
         </label>
         <label>カテゴリ
           <select id="editCategory">
             <option value="食費">食費</option>
-            <option value="日用品">日用品</option>
-            <option value="固定出費（家賃•光熱•通信）">固定出費（家賃•光熱•通信）</option>
-            <option value="外食等">外食等</option>
-            <option value="医療費">医療費</option>
-            <option value="美容">美容</option>
-            <option value="その他">その他</option>
+            <option value="衛生用品">衛生用品</option>
+            <option value="生活用品">生活用品</option>
+            <option value="電気">電気</option>
+            <option value="ガス">ガス</option>
+            <option value="水道">水道</option>
+            <option value="家賃">家賃</option>
+            <option value="ベビー用品">ベビー用品</option>
+            <option value="その他">その他</option>            
           </select>
         </label>
         <label>メモ
