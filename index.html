@@ -86,9 +86,12 @@
     <section class="details card">
       <div class="row">
         <h2>明細（<span id="currentMonthLong">—</span>）</h2>
+        <!-- add debug         -->
+        <button id="toggle-details">▶ 明細を表示</button>
         <button id="csvBtn" class="btn">CSV出力</button>
       </div>
-      <div class="responsive-table">
+      <!-- <div class="responsive-table"> -->
+      <div class="responsive-table" style="display:none;">     
         <table id="listTable">
           <thead>
             <tr>

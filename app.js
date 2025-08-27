@@ -201,6 +201,18 @@
     a.href=url; a.download=`kakeibo-${yyyymm(currentMonth)}.csv`; a.click(); URL.revokeObjectURL(url);
   });
 
+  // 明細表示の切替処理
+  document.getElementById("toggle-details").addEventListener("click", function () {
+    const list = document.getElementById("responsive-table");
+    if (list.style.display === "none") {
+      list.style.display = "block";
+      this.textContent = "▼ 明細を隠す";
+    } else {
+      list.style.display = "none";
+      this.textContent = "▶ 明細を表示";
+    }
+  });
+
   (async function init(){
     setMonthLabel();
     const user = await window.FirebaseCtx.ensureSignedIn();
