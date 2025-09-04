@@ -91,15 +91,15 @@
 
   // グラフ表示機能
   function renderTotalsAndChart(){
-    const sumsByPayer = {'おっと':0,'つま':0};
+    const sumsByPayer = {'Saya':0,'Misa':0};
     const sumsByCat = {};
     for (const {data} of currentDocs){
       sumsByPayer[data.payer] = (sumsByPayer[data.payer]||0) + Number(data.amount||0);
       sumsByCat[data.category] = (sumsByCat[data.category]||0) + Number(data.amount||0);
     }
-    document.getElementById('sumHusband').textContent = `¥${formatJPY(sumsByPayer['おっと']||0)}`;
-    document.getElementById('sumWife').textContent = `¥${formatJPY(sumsByPayer['つま']||0)}`;
-    const total = (sumsByPayer['おっと']||0) + (sumsByPayer['つま']||0);
+    document.getElementById('sumHusband').textContent = `¥${formatJPY(sumsByPayer['Saya']||0)}`;
+    document.getElementById('sumWife').textContent = `¥${formatJPY(sumsByPayer['Misa']||0)}`;
+    const total = (sumsByPayer['Saya']||0) + (sumsByPayer['Misa']||0);
     document.getElementById('sumTotal').textContent = `¥${formatJPY(total)}`;
 
     const labels = Object.keys(sumsByCat);
